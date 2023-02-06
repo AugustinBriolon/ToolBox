@@ -45,7 +45,6 @@
     @include respoM {
       padding-left: 13px !important;
       box-shadow: $shadow-smooth;
-      padding-left: $spacing-sm;
       background: $color-white;
       overflow: hidden;
       border-radius: $radius-main;
@@ -59,6 +58,8 @@
 
       .navbar-list li a {
         margin-left: $spacing-sm !important;
+        touch-action: none;
+        -ms-touch-action: none;
       }
     }
 
@@ -79,6 +80,10 @@
         list-style: none;
         white-space: nowrap;
 
+        @include respoM {
+          width: fit-content;
+        }
+
         svg {
           width: 24px;
         }
@@ -91,19 +96,3 @@
     }
   }
 }
-
-// .security {
-//   border: 1px solid $color-primary;
-// }
-// .home {
-//   border: 1px solid $color-fifth;
-// }
-// .text {
-//   border: 1px solid $color-secondary;
-// }
-// .design {
-//   border: 1px solid $color-third;
-// }
-// .code {
-//   border: 1px solid $color-fourth;
-// }
